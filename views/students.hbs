@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-12">
+        <br>
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>Students</h2>
+            <a href="/students/add" class="btn btn-success">Add New Student</a>
+        </div>
+        <hr />
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Student&nbsp;Num</th>
+                        <th>Full&nbsp;Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Course</th>
+                        <th></th> <!-- Empty header for the Remove button -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each students}}
+                        <tr>
+                            <td>{{studentNum}}</td>
+                            <td><a href="/student/{{this.studentNum}}">{{this.firstName}} {{this.lastName}}</a></td>
+                            <td><a href="mailto:{{this.email}}">{{this.email}}</a></td>
+                            <td>{{this.addressStreet}}, {{this.addressCity}}, {{this.addressProvince}}</td>
+                            <td>{{this.status}}</td>
+                            <td><a href="/students?course={{this.course}}">{{this.courseCode}}</a></td>
+                            <td>
+                                <a href="/student/delete/{{this.studentNum}}" class="btn btn-danger">Remove</a>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {{#unless students.length}}
+    <div class="col-md-12 text-center">
+        <strong>{{message}}</strong>
+    </div>
+    {{/unless}}
+</div>
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <section id="tables">
+                    <h2>-:Tables:-</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <caption>Table 1: Student Data at Seneca Campuses</caption>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">Semester</th>
+                                    <th colspan="2">Total Students In BTT</th>
+                                </tr>
+                                <tr>
+                                    <th>Nenham Campus</th>
+                                    <th>SIA Campus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>WINTER</td>
+                                    <td>239</td>
+                                    <td>99</td>
+                                </tr>
+                                <tr>
+                                    <td>SUMMER</td>
+                                    <td>169</td>
+                                    <td>93</td>
+                                </tr>
+                                <tr>
+                                    <td>FALL</td>
+                                    <td>279</td>
+                                    <td>115</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3">Footer Content</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <caption>Table 2: Top College Data</caption>
+                            <thead>
+                                <tr>
+                                    <th>Seneca Campuses</th>
+                                    <th>Humber Campuses</th>
+                                    <th>Centennial Campuses</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Newnham</td>
+                                    <td>Humber North</td>
+                                    <td>Morning Side</td>
+                                </tr>
+                                <tr>
+                                    <td>SIA</td>
+                                    <td>Lakeshore</td>
+                                    <td>Progress Avenue</td>
+                                </tr>
+                                <tr>
+                                    <td>King</td>
+                                    <td>Humber College Building A & H & C</td>
+                                    <td>Downsview</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>This section demonstrates the use of HTML tables with various attributes such as rowspan, colspan, thead, tbody, and tfoot.</p>
+                    <p>HTML5 introduced significant improvements and new features for tables:
+                        <ul>
+                        <li>Structured Elements: HTML5 introduced <thead>, <tbody>, and <tfoot> elements to better structure tables, improving readability and accessibility.</li>
+                        
+                        <li>Semantic Headers: <th> elements are used to define table headers, providing semantic meaning and improving accessibility with attributes like scope, headers, and abbr.</li>
+                        
+                        <li>Accessibility Enhancements: Attributes like scope, headers, and abbr enhance accessibility by associating data cells with header cells and providing additional context.</li>
+                        
+                        <li>Colspan and Rowspan Handling: HTML5 maintains support for colspan and rowspan attributes, allowing cells to span multiple rows or columns as needed.</li>
+                        
+                        <li>Table Caption: The <caption> element provides a title or caption for the table, enhancing usability and accessibility.</li>
+                        
+                        <li>Responsive Design: Tables can be made responsive using CSS frameworks or responsive design techniques to ensure they display well on various devices.</li>
+                        
+                        <li>These features collectively improve the structure, accessibility, and responsiveness of tables in HTML5, making them more versatile and user-friendly for displaying tabular data on the web.</li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section id="lists">
+                    <h2>-:Lists:-</h2>
+                    <h2>Business Information Technology Summer 2024 Courses.</h2>
+                    <ul>
+                        <li>DBS710
+                            <ol>
+                                <li>Assignments</li>
+                                <li>Exams</li>
+                                <li>Labs</li>
+                            </ol>
+                        </li>
+                        <li>NWK780
+                            <ol>
+                                <li>Assignments</li>
+                                <li>Exams</li>
+                                <li>Labs</li>
+                            </ol>
+                        </li>
+                        <li>OSL740
+                            <ol>
+                                <li>Assignments</li>
+                                <li>Exams</li>
+                                <li>Labs</li>
+                            </ol>
+                        </li>
+                        <li>OSM720
+                            <ol>
+                                <li>Assignments</li>
+                                <li>Exams</li>
+                                <li>Labs</li>
+                            </ol>
+                        </li>
+                        <li>PMC700
+                            <ol>
+                                <li>Assignments</li>
+                                <li>Exams</li>
+                                <li>Labs</li>
+                            </ol>
+                        </li>
+                        <li>WEB700
+                            <ol>
+                                <li>Assignments</li>
+                                <li>Exams</li>
+                                <li>Labs</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <p>This section showcases the use of unordered lists with nested lists of different types (unordered within ordered).</p>
+                    <p>Lists in HTML5 are versatile tools that allow web developers to organize and present information effectively. Ordered lists (ol) are ideal for creating numbered lists, providing a sequential order to items such as steps in a process or ranked items. Unordered lists (ul) are commonly used for bulleted lists, offering a clear and visually appealing way to present items without a specific order. Definition lists (dl) are suitable for presenting terms and their corresponding definitions, making them useful for glossaries or dictionaries. These list elements help improve the structure and readability of content on web pages, enhancing the overall user experience by providing organized and easily digestible information.</p>
+                </section>
+
+                <section id="images">
+                    <h2>-:Images:-</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <img src="https://im.rediff.com/cricket/2023/jan/17kohli1.jpg" alt="Snowboarder in halfpipe" class="img-fluid fixed-size">
+                            <p>Image 1: King Kohli</p>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <img src="https://wallpapercave.com/wp/wp1859070.jpg" alt="Placeholder Image" class="img-fluid fixed-size">
+                            <p>Image 2: Captain Cool</p>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <img src="https://media.telanganatoday.com/wp-content/uploads/2024/07/Rohit-Sharma.jpg" alt="Placeholder Image" class="img-fluid fixed-size">
+                            <p>Image 3: HITMAN Sharma</p>
+                        </div>
+                    </div>
+                    <p>This section includes three images with alternative text, demonstrating the use of images in HTML.</p>
+                    <p>Images in HTML5 are essential elements that enrich the visual content of web pages. The <img> tag is used to insert images into HTML documents, allowing developers to enhance the aesthetic appeal and convey information more effectively. Images can be linked from external sources using the src attribute or embedded directly into the HTML file. Additional attributes like alt provide alternative text for screen readers and improve accessibility. Images play a crucial role in engaging users, conveying concepts, and creating visually appealing web experiences.</p>
+                </section>
+
+                <section id="audio">
+                    <h2>-:Audio:-</h2>
+                    <audio controls>
+                        <source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-audio.mp3" type="audio/mpeg">
+                        <source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-audio.ogg" type="audio/ogg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p>This section demonstrates the use of HTML5 audio player with two audio sources.</p>
+                    <p>Audio elements in HTML5 offer an interactive and engaging way to incorporate sound into web pages. The audio tag is used to embed audio files directly into HTML documents, allowing developers to enhance user experience through music, narration, or other audio content. The src attribute specifies the source URL of the audio file, which can be in various formats like MP3, WAV, or OGG. Additional attributes like controls enable built-in audio controls such as play, pause, and volume adjustment, making it user-friendly. The audio tag also supports attributes like autoplay, loop, and preload for customized playback behavior. Integrating audio elements in HTML5 provides an immersive experience and enhances the overall multimedia content of web pages.</p>
+                </section>
+
+                <section id="video">
+                    <h2>-:Video:-</h2>
+                    <video width="100%" controls>
+                        <source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-video.mp4" type="video/mp4">
+                        <source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-video.ogg" type="video/ogg">
+                        <source src="https://pat-crawford-sdds.netlify.app/shared/fall-2021/web700/A3/sample-video.webm" type="video/webm">
+                        Your browser does not support the video element.
+                    </video>
+                    <p>This section demonstrates the use of HTML5 video player with three video sources.</p>
+                    <p>Video elements in HTML5 are powerful tools for integrating multimedia content into web pages, offering a dynamic and engaging user experience. The video tag is used to embed video files directly into HTML documents, enabling developers to deliver visual content such as tutorials, presentations, or promotional videos. The src attribute specifies the source URL of the video file, which can be in formats like MP4, WebM, or OGG. Additional attributes like controls provide built-in video controls for play, pause, volume adjustment, and fullscreen mode, enhancing user interaction. Attributes like autoplay, loop, and preload offer options for customized video playback behavior. The video tag supports multiple video sources using the source element, ensuring compatibility across different browsers and devices. Incorporating video elements in HTML5 enriches the multimedia content of web pages, making them more engaging and informative for users.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
