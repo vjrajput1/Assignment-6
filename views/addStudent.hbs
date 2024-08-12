@@ -82,16 +82,20 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="course">Enrolled in Course:</label>
-                                    <select class="form-control" id="course" name="course" required>
+                                    <div class="form-group">
+                                        <label for="course">Enrolled in Course:</label>
+                                        {{#if courses}}
+                                        <select class="form-select" name="course" id="course">
                                         <option value="">Select Course</option>
                                         {{#each courses}}
-                                            <option value="{{this.courseId}}">{{this.courseCode}}</option>
+                                            <option value="{{courseId}}">{{courseCode}}</option>
                                         {{/each}}
-                                    </select>
+                                        </select>
+                                        {{else}}
+                                            <div>No Courses</div>
+                                        {{/if}}
+                                    </div>
                                 </div>
-                            </div>
                         </div>
                     </fieldset>
                     <hr />

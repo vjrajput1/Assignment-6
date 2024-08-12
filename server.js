@@ -6,7 +6,7 @@
  *  
  *  Name: Vaibhav Jaysinh Rajput 
  *  Student ID: 144444239 
- *  Date: 26/06/2024 
+ *  Date: 09/08/2024 
  ********************************************************************************/
 const express = require("express");
 const path = require("path");
@@ -100,17 +100,44 @@ app.post('/students/add', (req, res) => {
     });
 });
 
-app.get('/student/:studentNum', (req, res) => {
-    collegeData.getStudentByNum(req.params.studentNum).then((data) => {
-        if (data) {
-            res.render('student', { viewData: { student: data } });
-        } else {
-            res.status(404).send("Student Not Found");
-        }
-    }).catch((err) => {
-        res.status(500).send("Unable to Retrieve Student");
-    });
-});
+app.get("/student/:studentNum", (req, res) => { 
+ 
+    // initialize an empty object to store the values     
+    let viewData = {}; 
+ 
+    data.getStudentByNum(req.params.studentNum).then((data) => {         
+        if (data) { 
+            viewData.student = data; //store student data in the "viewData" object as "student" 
+        } else { 
+            viewData.student = null; // set student to null if none were returned 
+        } 
+    }).catch((err) => { 
+        viewData.student = null; // set student to null if there was an error  
+    }).then(data.getCourses) 
+    .then((data) => { 
+        viewData.courses = data; // store course data in the "viewData" object as "courses" 
+ 
+        // loop through viewData.courses and once we have found the courseId that matches 
+        // the student's "course" value, add a "selected" property to the matching          
+        // viewData.courses object 
+ 
+        for (let i = 0; i < viewData.courses.length; i++) { 
+            if (viewData.courses[i].courseId == viewData.student.course) {                 
+                viewData.courses[i].selected = true; 
+            } 
+        } 
+ 
+    }).catch((err) => { 
+        viewData.courses = []; // set courses to empty if there was an error 
+    }).then(() => { 
+        if (viewData.student == null) { // if no student - return an error             
+            res.status(404).send("Student Not Found"); 
+        } else { 
+            res.render("student", { viewData: viewData }); // render the "student" view 
+        } 
+    }); 
+}); 
+
 
 
 

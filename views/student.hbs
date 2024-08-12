@@ -80,27 +80,29 @@
                                 <div class="form-group">
                                     <label>Enrollment Status:</label><br />
                                     <label class="checkbox-inline">
-                                        <input type="radio" value="Full Time" name="status" {{#if (eq viewData.student.status "Full Time")}}checked{{/if}} required /> Full Time
+                                        <input type="radio" value="Full Time" name="status" {{#equal viewData.student.status "Full Time"}}checked{{/equal}} required /> Full Time
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="radio" value="Part Time" name="status" {{#if (eq viewData.student.status "Part Time")}}checked{{/if}} required /> Part Time
+                                        <input type="radio" value="Part Time" name="status" {{#equal viewData.student.status "Part Time"}}checked{{/equal}} required /> Part Time
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="course">Enrolled in Course:</label>
-                                    <select class="form-control" id="course" name="course" required>
-                                        <option value="">Select Course</option>
-                                        {{#each courses}}
-                                            <option value="{{this.courseId}}" {{#if (eq this.courseId student.course)}}selected{{/if}}>{{this.courseCode}}</option>
-                                        {{/each}}
-                                    </select>
+                                    <label for="course">Course:</label>
+                                        {{#if viewData.courses}} 
+                                            <select class="form-select" name="course" id="course"> 
+                                                <option value="">Select Course</option> 
+                                        {{#each viewData.courses}} 
+                                                <option value="{{courseId}}" {{#if selected}} selected {{/if}} >{{courseCode}} </option>     {{/each}} 
+                                            </select> 
+                                        {{else}} 
+                                            <div>No Courses</div> 
+                                        {{/if}} 
                                 </div>
                             </div>
                         </div>
                     </fieldset>
-
                     <hr />
                     <button type="submit" class="btn btn-primary">Update Student</button>
                 </form>
